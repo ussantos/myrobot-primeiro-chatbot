@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meu Primeiro Chatbot</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <script src="src/app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="Area principal do chatbot">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Projeto inicial</p>
+            <h1>Meu Primeiro Chatbot</h1>
+          </div>
+          <div class="status-pill">Demo sem API</div>
+        </header>
+
+        <div class="mode-tabs" role="tablist" aria-label="Modos do chatbot">
+          <button class="mode-button active" type="button" data-mode="chat">Chatbot</button>
+          <button class="mode-button" type="button" data-mode="joke">Piadas</button>
+          <button class="mode-button" type="button" data-mode="story">Historias</button>
+        </div>
+
+        <section class="chat-panel" aria-label="Conversa">
+          <div id="messages" class="messages" aria-live="polite"></div>
+          <form id="chatForm" class="composer">
+            <label class="sr-only" for="messageInput">Mensagem</label>
+            <input id="messageInput" name="message" type="text" autocomplete="off" placeholder="Digite uma pergunta, tema de piada ou ideia de historia">
+            <button type="submit">Enviar</button>
+          </form>
+          <div class="quick-actions" aria-label="Acoes rapidas">
+            <button type="button" data-example="Como a IA cria uma resposta?">Pergunta</button>
+            <button type="button" data-example="robo na escola">Tema de piada</button>
+            <button type="button" data-example="um astronauta que perdeu o mapa de Marte">Ideia de historia</button>
+            <button type="button" id="clearButton">Limpar</button>
+          </div>
+        </section>
+      </section>
+
+      <aside class="side-panel" aria-label="Detalhes do projeto">
+        <div class="panel-block">
+          <p class="eyebrow">Prompt do modo</p>
+          <h2 id="promptTitle">Chatbot educacional</h2>
+          <p id="promptText">Responda como um colega de estudos: explique em linguagem simples e sugira um proximo teste.</p>
+        </div>
+        <div class="panel-block">
+          <p class="eyebrow">Fluxo do aluno</p>
+          <ol class="steps">
+            <li>Escolhe um modo.</li>
+            <li>Escreve uma entrada curta.</li>
+            <li>Observa a resposta.</li>
+            <li>Ajusta o prompt e testa de novo.</li>
+          </ol>
+        </div>
+        <div class="panel-block">
+          <p class="eyebrow">Base da trilha</p>
+          <p>Este exemplo prepara o aluno para entender entrada, processamento e resposta antes de usar modelos generativos reais.</p>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
